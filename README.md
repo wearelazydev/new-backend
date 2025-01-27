@@ -1,7 +1,8 @@
 # Setup backend
 
 ```shell
-npm run prepare
+npm install
+npm run download:zk-files
 ```
 
 Duplikat file .env.example kemudian rename menjadi .env dan isi dengan credentials anda
