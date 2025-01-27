@@ -86,6 +86,9 @@ app.get("/generate-proof", async (req, res) => {
         prUrl,
         {
           ...publicOptions,
+        },
+        {
+          ...privateOptions,
           responseMatches: [
             {
               type: "regex",
@@ -97,8 +100,7 @@ app.get("/generate-proof", async (req, res) => {
                 '"user":\\s*{\\s*"login":\\s*"(?<login>[^"]+)",\\s*"id":\\s*(?<id>\\d+),\\s*"node_id":\\s*"(?<node_id>[^"]+)"',
             },
           ],
-        },
-        privateOptions
+        }
       )
       .catch((error) => {
         console.log(prUrl);
@@ -111,6 +113,9 @@ app.get("/generate-proof", async (req, res) => {
         userUrl,
         {
           ...publicOptions,
+        },
+        {
+          ...privateOptions,
           responseMatches: [
             {
               type: "regex",
@@ -118,8 +123,7 @@ app.get("/generate-proof", async (req, res) => {
                 '"login":\\s*"(?<login>[^"]+)",\\s*"id":\\s*(?<id>\\d+),\\s*"node_id":\\s*"(?<node_id>[^"]+)"',
             },
           ],
-        },
-        privateOptions
+        }
       )
       .catch((error) => {
         console.log(userUrl);
