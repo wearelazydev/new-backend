@@ -4,7 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "prepare": "npm install && node node_modules/@reclaimprotocol/zk-symmetric-crypto/lib/scripts/download-files",
+    "download:zk-files": "node node_modules/@reclaimprotocol/zk-symmetric-crypto/lib/scripts/download-files",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
